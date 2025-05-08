@@ -13,7 +13,7 @@ Servo s1;
 
 RTC_DS3231 rtc;
 WiFiUDP ntpUDP;
-NTPClient timeClient(ntpUDP, "asia.pool.ntp.org", 19800, 60000);
+NTPClient timeClient(ntpUDP, "asia.pool.ntp.org", 19800, 60000);    // +5:30 GMT Indian Standard Time
 
 
 char t[32];
@@ -28,8 +28,8 @@ void setup() {
   rtc.begin();         // Initialize DS3231 RTC module
 
   // Connect to WiFi
-  char* ssid = "vivo Y33T";  // Replace with your WiFi SSID
-  char* password = "";       // Replace with your WiFi password
+  char* ssid = "ssid";  // Replace with your WiFi SSID
+  char* password = "password";       // Replace with your WiFi password
   WiFi.begin(ssid, password);
 
   while (WiFi.status() != WL_CONNECTED) {
