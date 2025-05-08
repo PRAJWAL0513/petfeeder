@@ -4,7 +4,7 @@
 #include <ESP32Servo.h>
 
 // Wi-Fi credentials
-const char* ssid = "hotspot";
+const char* ssid = "ssid";
 const char* password = "password";
 
 // NTP setup
